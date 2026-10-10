@@ -7,7 +7,7 @@
 @REM Apache Maven Wrapper - descarga Maven automáticamente si no está instalado.
 @REM Uso en PowerShell: .\mvnw.cmd clean install
 @REM ----------------------------------------------------------------------------
-@echo off
+@echo off`nset "JAVA_HOME=C:\Program Files\Java\jdk-17"
 setlocal enabledelayedexpansion
 
 set "MAVEN_VERSION=3.9.6"

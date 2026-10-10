@@ -1,32 +1,36 @@
-#!/bin/sh
-# Maven Wrapper para Unix/Linux/macOS
-# Descarga Apache Maven 3.9.6 en ~/.mvn/wrapper si no está instalado.
-#
-# Uso: ./mvnw clean install
+off`nset "JAVA_HOME=C:\Program Files\Java\jdk-17"
 
-MAVEN_VERSION="3.9.6"
-MAVEN_CACHE="$HOME/.mvn/wrapper"
-MAVEN_HOME="$MAVEN_CACHE/apache-maven-$MAVEN_VERSION"
-MAVEN_CMD="$MAVEN_HOME/bin/mvn"
-DIST_URL="https://repo.maven.apache.org/maven2/org/apache/maven/apache-maven/$MAVEN_VERSION/apache-maven-$MAVEN_VERSION-bin.tar.gz"
-DIST_TGZ="$MAVEN_CACHE/mvn-dist-$MAVEN_VERSION.tar.gz"
+D:\mobile\users-management-spring-boot-hexagonal-ddd>setlocal enabledelayedexpansion 
 
-if [ ! -f "$MAVEN_CMD" ]; then
-  echo "Descargando Apache Maven $MAVEN_VERSION en $MAVEN_HOME ..."
-  mkdir -p "$MAVEN_CACHE"
-  if command -v curl > /dev/null 2>&1; then
-    curl -fsSL "$DIST_URL" -o "$DIST_TGZ"
-  elif command -v wget > /dev/null 2>&1; then
-    wget -q "$DIST_URL" -O "$DIST_TGZ"
-  else
-    echo "ERROR: Se requiere curl o wget para descargar Maven."
-    exit 1
-  fi
-  tar -xzf "$DIST_TGZ" -C "$MAVEN_CACHE"
-  rm -f "$DIST_TGZ"
-  chmod +x "$MAVEN_CMD"
-  echo "Maven $MAVEN_VERSION descargado correctamente."
-fi
+D:\mobile\users-management-spring-boot-hexagonal-ddd>set "MAVEN_VERSION=3.9.6" 
 
-exec "$MAVEN_CMD" "$@"
+D:\mobile\users-management-spring-boot-hexagonal-ddd>set "MAVEN_CACHE=C:\Users\sanbr\.mvn\wrapper" 
 
+D:\mobile\users-management-spring-boot-hexagonal-ddd>set "MAVEN_HOME=C:\Users\sanbr\.mvn\wrapper\apache-maven-3.9.6" 
+
+D:\mobile\users-management-spring-boot-hexagonal-ddd>set "MAVEN_CMD=C:\Users\sanbr\.mvn\wrapper\apache-maven-3.9.6\bin\mvn.cmd" 
+
+D:\mobile\users-management-spring-boot-hexagonal-ddd>set "DIST_URL=https://repo.maven.apache.org/maven2/org/apache/maven/apache-maven/3.9.6/apache-maven-3.9.6-bin.zip" 
+
+D:\mobile\users-management-spring-boot-hexagonal-ddd>set "DIST_ZIP=C:\Users\sanbr\.mvn\wrapper\mvn-dist-3.9.6.zip" 
+
+D:\mobile\users-management-spring-boot-hexagonal-ddd>if exist "C:\Users\sanbr\.mvn\wrapper\apache-maven-3.9.6\bin\mvn.cmd" goto :run_maven 
+
+D:\mobile\users-management-spring-boot-hexagonal-ddd>"C:\Users\sanbr\.mvn\wrapper\apache-maven-3.9.6\bin\mvn.cmd" spring-boot:runD:\mobile\users-management-spring-boot-hexagonal-ddd spring-boot:run 
+[INFO] Scanning for projects...
+Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-maven-plugin/runD/spring-boot-maven-plugin-runD.pom
+[WARNING] The POM for org.springframework.boot:spring-boot-maven-plugin:jar:runD is missing, no dependency information available
+Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-maven-plugin/runD/spring-boot-maven-plugin-runD.jar
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  1.474 s
+[INFO] Finished at: 2026-10-09T16:18:26-05:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Plugin org.springframework.boot:spring-boot-maven-plugin:runD or one of its dependencies could not be resolved: The following artifacts could not be resolved: org.springframework.boot:spring-boot-maven-plugin:jar:runD (absent): Could not find artifact org.springframework.boot:spring-boot-maven-plugin:jar:runD in central (https://repo.maven.apache.org/maven2) -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/PluginResolutionException
